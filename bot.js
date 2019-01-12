@@ -22,18 +22,22 @@ client.on('message', message => {
                 .setColor('#ff0000')
                 // m.send(`[${m}]`);
                 m.send(`${m}`,{embed: bc});
-    if (message.content.startsWith('$bc-bot')){ // البريفكس والامر
-    if(!message.author.id === '') return;
-    message.channel.sendMessage('جار ارسال الرسالة ✅')
-    client.users.forEach(m =>{
-    m.sendMessage(args)
             });
         }
         } else {https://pastebin.com/night_mode
             return;
         }
     });
-
+client.on('message', message => {
+    let args = message.content.split(' ').slice(1).join(' ');
+    if (message.content.startsWith('$bc-bot')){ // البريفكس والامر
+    if(!message.author.id === '') return;
+    message.channel.sendMessage('جار ارسال الرسالة ✅')
+    client.users.forEach(m =>{
+    m.sendMessage(args)
+    })
+    }
+    });
 
 client.on('ready', () => {
    console.log(`----------------`);
