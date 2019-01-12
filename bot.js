@@ -22,7 +22,7 @@ client.on('message', message => {
                 .setColor('#ff0000')
                 // m.send(`[${m}]`);
                 m.send(`${m}`,{embed: bc});
-       message.channel.sendMessage('جار ارسال الرسالة ✅')
+    message.channel.sendMessage('جار ارسال الرسالة ✅')
     client.users.forEach(m =>{
     m.sendMessage(args)
             });
