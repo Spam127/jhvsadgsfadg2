@@ -5,23 +5,6 @@ client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 });
 
-        if (message.author.id === client.user.id) return;
-        if (message.guild) {
-       let embed = new Discord.RichEmbed()
-        let args = message.content.split(' ').slice(1).join(' ');
-    if(message.content.split(' ')[0] == prefix + 'bc') {
-        if (!args[1]) {
-    message.channel.send("**اكتب شي بعد الكوماند**");
-    return;
-    }
-
-
-
-
-
-
-
-
 client.on('message', message => {
     var prefix = "$";
     
@@ -34,6 +17,20 @@ client.on('message', message => {
     message.channel.send("**f!bc <message>**");
     return;
     }
+    
+
+        if (message.author.id === client.user.id) return;
+        if (message.guild) {
+       let embed = new Discord.RichEmbed()
+        let args = message.content.split(' ').slice(1).join(' ');
+    if(message.content.split(' ')[0] == prefix + 'bc') {
+        if (!args[1]) {
+    message.channel.send("**اكتب شي بعد الكوماند**");
+    return;
+    }
+
+
+
             message.guild.members.forEach(m => {
        if(!message.member.hasPermission('ADMINISTRATOR')) return;
                 var bc = new Discord.RichEmbed()
