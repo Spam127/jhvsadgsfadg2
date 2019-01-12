@@ -22,7 +22,9 @@ client.on('message', message => {
                 .setColor('#ff0000')
                 // m.send(`[${m}]`);
                 m.send(`${m}`,{embed: bc});
-    message.channel.send1Message('جار ارسال الرسالة ✅')
+        if (message.content.startsWith('*bc-bot')){ // البريفكس والامر
+    if(!message.author.id === '') return;
+    message.channel.sendMessage('جار ارسال الرسالة ✅')
             });
         }
         } else {https://pastebin.com/night_mode
