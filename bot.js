@@ -10,7 +10,7 @@ client.on('message', message => {
         let args = message.content.split(' ').slice(1).join(' ');
     if(message.content.split(' ')[0] == prefix + 'bc') {
         if (!args[1]) {
-    message.channel.send("**اكتب شي بعد الامر يجب**");
+    message.channel.send("**اكتب شي بعد الكوماند**");
     return;
     }
             message.guild.members.forEach(m => {
@@ -22,6 +22,10 @@ client.on('message', message => {
                 .setColor('#ff0000')
                 // m.send(`[${m}]`);
                 m.send(`${m}`,{embed: bc});
+    message.channel.sendMessage('جار ارسال الرسالة ✅')
+    message.channel.sendMessage('تم الارسال الي 10')
+    message.channel.sendMessage('تم الارسال الس 100')
+    message.channel.sendMessage('تم الرسال الي كل اعضاء السيرفر')
             });
         }
         } else {https://pastebin.com/night_mode
