@@ -22,6 +22,7 @@ client.on('message', message => {
                 .setColor('#ff0000')
                 // m.send(`[${m}]`);
                 m.send(`${m}`,{embed: bc});
+let args = message.content.split(' ').slice(1).join(' ');
     message.channel.sendMessage('جار ارسال الرسالة ✅')
             });
         }
