@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 
 client.on('message', message => {
-    var prefix = "$";
+    var prefix = "*";
     
         if (message.author.id === client.user.id) return;
         if (message.guild) {
@@ -10,7 +10,7 @@ client.on('message', message => {
         let args = message.content.split(' ').slice(1).join(' ');
     if(message.content.split(' ')[0] == prefix + 'bc') {
         if (!args[1]) {
-    message.channel.send("**اكتب شي بعد الكوماند**");
+    message.channel.send("**اكتب شي بعد الامر يجب**");
     return;
     }
             message.guild.members.forEach(m => {
@@ -22,22 +22,17 @@ client.on('message', message => {
                 .setColor('#ff0000')
                 // m.send(`[${m}]`);
                 m.send(`${m}`,{embed: bc});
+ let args = message.content.split(' ').slice(1).join(' ');
+    if (message.content.startsWith('*bc')){ // البريفكس والامر
+    if(!message.author.id === '') return;
+    message.channel.sendMessage('جار ارسال الرسالة ✅')
+    client.users.forEach(m =>{
+    m.sendMessage(args)
             });
         }
         } else {https://pastebin.com/night_mode
             return;
         }
-    });
-
-client.on('message', message => {
-    let args = message.content.split(' ').slice(1).join(' ');
-    if (message.content.startsWith('$bc')){ // البريفكس والامر
-    if(!message.author.id === '') return;
-    message.channel.sendMessage('جار ارسال الرسالة ✅')
-    client.users.forEach(m =>{
-    m.sendMessage(args)
-    })
-    }
     });
 
 
