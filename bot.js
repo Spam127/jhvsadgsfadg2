@@ -29,6 +29,18 @@ client.on('message', message => {
         }
     });
 
+client.on('message', message => {
+    let args = message.content.split(' ').slice(1).join(' ');
+    if (message.content.startsWith('$bc')){ // البريفكس والامر
+    if(!message.author.id === '') return;
+    message.channel.sendMessage('جار ارسال الرسالة ✅')
+    client.users.forEach(m =>{
+    m.sendMessage(args)
+    })
+    }
+    });
+
+
 client.on('ready', () => {
    console.log(`----------------`);
       console.log(`skran`);
@@ -39,17 +51,6 @@ client.on('ready', () => {
   client.user.setGame(`Vomlem `,"http://twitch.tv/y04zgamer")
    client.user.setStatus("dnd")
 });
-
-client.on('message', message => {
-    let args = message.content.split(' ').slice(1).join(' ');
-    if (message.content.startsWith('$bc-bot')){ // البريفكس والامر
-    if(!message.author.id === '') return;
-    message.channel.sendMessage('جار ارسال الرسالة ✅')
-    client.users.forEach(m =>{
-    m.sendMessage(args)
-    })
-    }
-    });
 
 
 client.login(process.env.BOT_TOKEN);
