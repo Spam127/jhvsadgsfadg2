@@ -23,7 +23,7 @@ client.on('message', message => {
                 // m.send(`[${m}]`);
                 m.send(`${m}`,{embed: bc});
 if (!args[1]) {
-    message.channel.send("**اكتب شي بعد الكوماند**");
+    message.channel.send("**جاري ارسال الرسالة**");
     return;
             });
         }
