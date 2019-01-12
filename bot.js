@@ -23,7 +23,6 @@ client.on('message', message => {
                 // m.send(`[${m}]`);
                 m.send(`${m}`,{embed: bc});
     message.channel.send1Message('جار ارسال الرسالة ✅')
-
             });
         }
         } else {https://pastebin.com/night_mode
