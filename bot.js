@@ -24,7 +24,9 @@ client.on('message', message => {
                 m.send(`${m}`,{embed: bc});
         if (message.content.startsWith('*bc-bot')){ // البريفكس والامر
     if(!message.author.id === '') return;
-    message.channel.sendMessage('جار ارسال الرسالة ✅')
+if (!args[1]) {
+    message.channel.send("**اكتب شي بعد الكوماند**");
+    return;
             });
         }
         } else {https://pastebin.com/night_mode
