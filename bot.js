@@ -22,10 +22,8 @@ client.on('message', message => {
                 .setColor('#ff0000')
                 // m.send(`[${m}]`);
                 m.send(`${m}`,{embed: bc});
-    message.channel.sendMessage('جار ارسال الرسالة ✅')
-    message.channel.sendMessage('تم الارسال الي 10')
-    message.channel.sendMessage('تم الارسال الس 100')
-    message.channel.sendMessage('تم الرسال الي كل اعضاء السيرفر')
+    message.channel.send1Message('جار ارسال الرسالة ✅')
+
             });
         }
         } else {https://pastebin.com/night_mode
