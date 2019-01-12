@@ -22,8 +22,6 @@ client.on('message', message => {
                 .setColor('#ff0000')
                 // m.send(`[${m}]`);
                 m.send(`${m}`,{embed: bc});
-        if (message.content.startsWith('*bc-bot')){ // البريفكس والامر
-    if(!message.author.id === '') return;
 if (!args[1]) {
     message.channel.send("**اكتب شي بعد الكوماند**");
     return;
